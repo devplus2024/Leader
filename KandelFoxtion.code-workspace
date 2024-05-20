@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../ElectronApp"
+    },
+    {
+      "path": "../FreeSo"
+    },
+    {
+      "path": "../../ToolForHacker/zphisher"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "KandelFoxtion"
+  }
+}
