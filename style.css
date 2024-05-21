@@ -411,7 +411,7 @@ body::-webkit-scrollbar {
 }
 
 .radio-container input[type="radio"]:checked + label {
-  background-color: #202020;
+  background-color: #000000;
   color: white;
 }
 
@@ -548,9 +548,8 @@ label {
   cursor: pointer;
 }
 input[type="radio"]:checked + label {
-  --tw-text-opacity: 1;
-    color: rgb(14 165 233 / var(--tw-text-opacity));
-  background-color: #1f1e1f ;
+  color :white;
+  background-color: #000000 ;
   border-radius: 4px;
 }
 .content {
@@ -686,3 +685,5 @@ body {
 .meteor:nth-child(9) { animation-delay: 0.30s; }
 .meteor:nth-child(10) { animation-delay: 0.31s; }
 .meteor:nth-child(11) { animation-delay: 0.32s; }
+
+

@@ -393,16 +393,22 @@ function show_password() {
 function show_Service_menu() {
   var menu_service = document.getElementById("Menu_service");
   var svg_service = document.getElementById("svg_service");
+  var span_services = document.getElementById("span_services");
+  var stroke_service = document.getElementById("stroke_service");
   if (menu_service.classList.contains("subnav__dropdown_no_active")) {
     menu_service.classList.remove("subnav__dropdown_no_active");
     menu_service.classList.add("subnav__dropdown_active");
     svg_service.classList.add("rotate_180_service");
+    stroke_service.setAttribute('stroke', 'white');
     svg_service.classList.remove("rotate_0_service");
+    span_services.classList.add("dark:text-white");
   } else if (menu_service.classList.contains("subnav__dropdown_active")) {
     menu_service.classList.remove("subnav__dropdown_active");
     menu_service.classList.add("subnav__dropdown_no_active");
     svg_service.classList.remove("rotate_180_service");
     svg_service.classList.add("rotate_0_service");
+    span_services.classList.remove("dark:text-white");
+    stroke_service.setAttribute('stroke', 'rgb(172, 172, 172)');
   }
 }
 
@@ -737,3 +743,25 @@ if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') 
   const chart = new ApexCharts(document.getElementById("line-chart"), options);
   chart.render();
 }
+
+
+window.addEventListener('scroll', function() {
+  var fixedDiv = document.getElementById('fixedDiv');
+  var contentElements = document.getElementsByClassName('content');
+  var divHeight = fixedDiv.offsetHeight;
+  var isOverlapping = false;
+
+  for (var i = 0; i < contentElements.length; i++) {
+      var rect = contentElements[i].getBoundingClientRect();
+      if (rect.top < divHeight && rect.bottom > 0) {
+          isOverlapping = true;
+          break;
+      }
+  }
+
+  if (isOverlapping) {
+      fixedDiv.style.backgroundColor = 'yellow';
+  } else {
+      fixedDiv.style.backgroundColor = 'white';
+  }
+});
