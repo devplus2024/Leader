@@ -374,8 +374,8 @@ function showContent(id) {
   }
 }
 
-var activeContent = document.getElementById("blogContent");
-activeContent.classList.add("active");
+// var activeContent = document.getElementById("blogContent");
+// activeContent.classList.add("active");
 
 
 function show_password() {
