@@ -4,13 +4,7 @@
       "path": "."
     },
     {
-      "path": "../ElectronApp"
-    },
-    {
-      "path": "../FreeSo"
-    },
-    {
-      "path": "../../ToolForHacker/zphisher"
+      "path": "../../BuildWebsite/alternation"
     }
   ],
   "settings": {

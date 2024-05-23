@@ -687,3 +687,26 @@ body {
 .meteor:nth-child(11) { animation-delay: 0.32s; }
 
 
+.modal{
+  transition-delay: 2s ease-out ;
+  visibility: visible;
+  transition: transform 0.5s;
+}
+
+.modal_active{
+  transition-delay: 2s ease-out ;
+
+  opacity:100%;
+  transition: transform 0.1s;
+  transform: scale(1.02);
+
+
+}
+
+.cll{
+  background-color:rgb(53, 53, 53);
+}
+
+.gj_ryye_55{
+  transition:background 0.1s;
+}
