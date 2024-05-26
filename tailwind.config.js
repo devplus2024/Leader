@@ -9,12 +9,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('daisyui'),
-    require('flowbite/plugin'),
-    require('preline/plugin'),
-    require('flowbite/plugin')({
-      charts: true,
-    }),
   ],
 }
 

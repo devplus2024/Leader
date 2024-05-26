@@ -352,6 +352,7 @@ function translateEnglishToVietnamese() {
 
 function showContent(id) {
   var contents = document.querySelectorAll(".content");
+  var fixedDiv = document.getElementById("fixedDiv")
   contents.forEach((content) => content.classList.remove("active"));
 
   var activeContent = document.getElementById(id);
@@ -365,13 +366,19 @@ function showContent(id) {
     document.body.classList.add("no-scroll");
     document.body.classList.add("bg-yellow_body");
   } 
-  else if (id === "blogContent" || id === "homeContent" || id === "exerciseContent"  || id === "aboutContent"  || id === "pricingContent") {
-    document.body.classList.add("bg-black");
-    document.body.classList.add("no-scroll");
-  }else {
-    document.body.classList.add("no-scroll");
-    document.body.classList.remove("bg-black");
+  else if ( id === "blogContent") {
+    fixedDiv.classList.remove("bg-black");
+    fixedDiv.classList.remove("div_nav_flex");
+    fixedDiv.classList.add("div_nav_flex_blog");
+    fixedDiv.classList.add("bg-none");
   }
+  else{
+    fixedDiv.classList.add("div_nav_flex");
+    fixedDiv.classList.remove("div_nav_flex_blog");
+    fixedDiv.classList.add("bg-black");
+    fixedDiv.classList.remove("bg-none");
+  }
+  
 }
 
 // var activeContent = document.getElementById("blogContent");
@@ -774,3 +781,16 @@ window.addEventListener('scroll', function() {
       fixedDiv.style.backgroundColor = 'white';
   }
 });
+
+
+function view_video() {
+  var view_content = document.getElementById("view_content");
+  var value_video = document.getElementById("value_video").value;
+  if (value_video === "1" ){
+    view_content.classList.remove("hidden");
+    view_content.classList.add("block");
+  }else{
+    view_content.classList.remove("hidden");
+    view_content.classList.add("block");
+  }
+}

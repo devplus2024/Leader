@@ -710,3 +710,13 @@ body {
 .gj_ryye_55{
   transition:background 0.1s;
 }
+
+
+.div_nav_flex{
+  backdrop-filter: saturate(180%) blur(5px);
+}
+
+.div_nav_flex_blog{
+  backdrop-filter:none;
+}
+
