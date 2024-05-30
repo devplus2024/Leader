@@ -352,7 +352,7 @@ function translateEnglishToVietnamese() {
 
 function showContent(id) {
   var contents = document.querySelectorAll(".content");
-  var fixedDiv = document.getElementById("fixedDiv")
+  var fixedDiv = document.getElementById("fixedDiv");
   contents.forEach((content) => content.classList.remove("active"));
 
   var activeContent = document.getElementById(id);
@@ -365,25 +365,23 @@ function showContent(id) {
   } else if (id === "signupContent") {
     document.body.classList.add("no-scroll");
     document.body.classList.add("bg-yellow_body");
-  } 
-  else if ( id === "blogContent") {
+  } else if (id === "blogContent") {
     fixedDiv.classList.remove("bg-black");
     fixedDiv.classList.remove("div_nav_flex");
     fixedDiv.classList.add("div_nav_flex_blog");
     fixedDiv.classList.add("bg-none");
-  }
-  else{
+  } else {
     fixedDiv.classList.add("div_nav_flex");
     fixedDiv.classList.remove("div_nav_flex_blog");
     fixedDiv.classList.add("bg-black");
     fixedDiv.classList.remove("bg-none");
   }
-  
 }
 
 // var activeContent = document.getElementById("blogContent");
 // activeContent.classList.add("active");
-
+var activeContent = document.getElementById("blogContent");
+activeContent.classList.add("active");
 
 function show_password() {
   var input_password = document.getElementById("eye_icon");
@@ -408,7 +406,7 @@ function show_Service_menu() {
     menu_service.classList.remove("subnav__dropdown_no_active");
     menu_service.classList.add("subnav__dropdown_active");
     svg_service.classList.add("rotate_180_service");
-    stroke_service.setAttribute('stroke', 'white');
+    stroke_service.setAttribute("stroke", "white");
     svg_service.classList.remove("rotate_0_service");
     span_services.classList.add("dark:text-white");
   } else if (menu_service.classList.contains("subnav__dropdown_active")) {
@@ -417,16 +415,15 @@ function show_Service_menu() {
     svg_service.classList.remove("rotate_180_service");
     svg_service.classList.add("rotate_0_service");
     span_services.classList.remove("dark:text-white");
-    stroke_service.setAttribute('stroke', 'rgb(172, 172, 172)');
+    stroke_service.setAttribute("stroke", "rgb(172, 172, 172)");
   }
 }
 
-
 function show_modal() {
-  var content_modal = document.getElementById('content_modal');
+  var content_modal = document.getElementById("content_modal");
   var blog_bg = document.getElementById("blog_bg");
   var over_flow_y = document.getElementById("over_flow_y");
-  if (content_modal.classList.contains("modal")){
+  if (content_modal.classList.contains("modal")) {
     content_modal.classList.add("modal_active");
     content_modal.classList.remove("modal");
     blog_bg.classList.remove("opacity-100");
@@ -434,8 +431,7 @@ function show_modal() {
     blog_bg.classList.add("bg-[#00000099]");
     blog_bg.style.zIndex = "4";
     over_flow_y.style.overflowY = "hidden";
-  }
-  else if (content_modal.classList.contains("modal_active")){
+  } else if (content_modal.classList.contains("modal_active")) {
     blog_bg.classList.add("opacity-100");
     blog_bg.classList.remove("opacity-100");
     blog_bg.classList.remove("bg-[#00000099]");
@@ -443,78 +439,73 @@ function show_modal() {
     content_modal.classList.add("modal");
     over_flow_y.style.overflowY = "auto";
     blog_bg.style.zIndex = "-99";
-  } 
+  }
 }
 
 function show_menu_blog() {
   var menu_blog = document.getElementById("menu_blog");
-  if (menu_blog.classList.contains("w-0")){
+  if (menu_blog.classList.contains("w-0")) {
     menu_blog.classList.remove("w-0");
     menu_blog.classList.add("w-[12rem]");
-  }
-  else if (menu_blog.classList.contains("w-[12rem]")){
+  } else if (menu_blog.classList.contains("w-[12rem]")) {
     menu_blog.classList.remove("w-[12rem]");
     menu_blog.classList.add("w-0");
   }
 }
 function next_video() {
   var menu_blog = document.getElementById("video_1");
-  if (menu_blog.classList.contains("ml-[34rem]")){
+  if (menu_blog.classList.contains("ml-[34rem]")) {
     menu_blog.classList.remove("ml-[34rem]");
     menu_blog.classList.add("-ml-[34rem]");
-  }
-  else if (menu_blog.classList.contains("-ml-[34rem]")){
+  } else if (menu_blog.classList.contains("-ml-[34rem]")) {
     menu_blog.classList.remove("-ml-[34rem]");
     menu_blog.classList.add("ml-[34rem]");
   }
 }
 
-
-
 // script.js
-document.addEventListener("DOMContentLoaded", function() {
-  const svg = document.getElementById('grid');
+document.addEventListener("DOMContentLoaded", function () {
+  const svg = document.getElementById("grid");
   const width = svg.clientWidth;
   const height = svg.clientHeight;
   const gridSize = 20;
 
   // Create vertical lines
   for (let x = 0; x <= width; x += gridSize) {
-      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-      line.setAttribute('x1', x);
-      line.setAttribute('y1', 0);
-      line.setAttribute('x2', x);
-      line.setAttribute('y2', height);
-      line.setAttribute('stroke', '#ccc');
-      line.setAttribute('stroke-width', 1);
-      svg.appendChild(line);
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", x);
+    line.setAttribute("y1", 0);
+    line.setAttribute("x2", x);
+    line.setAttribute("y2", height);
+    line.setAttribute("stroke", "#ccc");
+    line.setAttribute("stroke-width", 1);
+    svg.appendChild(line);
   }
 
   // Create horizontal lines
   for (let y = 0; y <= height; y += gridSize) {
-      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-      line.setAttribute('x1', 0);
-      line.setAttribute('y1', y);
-      line.setAttribute('x2', width);
-      line.setAttribute('y2', y);
-      line.setAttribute('stroke', '#ccc');
-      line.setAttribute('stroke-width', 1);
-      svg.appendChild(line);
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", 0);
+    line.setAttribute("y1", y);
+    line.setAttribute("x2", width);
+    line.setAttribute("y2", y);
+    line.setAttribute("stroke", "#ccc");
+    line.setAttribute("stroke-width", 1);
+    svg.appendChild(line);
   }
 });
-
 
 function getRandomPosition(max) {
   return Math.floor(Math.random() * max);
 }
 
 function positionBoxes() {
-  const container = document.querySelector('.container_vhome');
-  const boxes = document.querySelectorAll('.box');
+  const container = document.querySelector(".container_vhome");
+  const boxes = document.querySelectorAll(".box");
   const containerSize = 624;
   const boxSize = 50;
 
-  boxes.forEach(box => {
+  boxes.forEach((box) => {
     const x = getRandomPosition(containerSize - boxSize);
     const y = getRandomPosition(containerSize - boxSize);
     box.style.left = `${x}px`;
@@ -524,164 +515,175 @@ function positionBoxes() {
 
 positionBoxes();
 
-
-
-
 // Map
-  (function () {
-    const dataSet = {
-      BRA: {
-        active: {
-          value: '5,101',
-          percent: '42.2',
-          isGrown: false
-        },
-        new: {
-          value: '444',
-          percent: '41.2',
-          isGrown: false
-        },
-        fillKey: 'MAJOR',
-        short: 'br'
+(function () {
+  const dataSet = {
+    BRA: {
+      active: {
+        value: "5,101",
+        percent: "42.2",
+        isGrown: false,
       },
-      CHN: {
-        active: {
-          value: '10,101',
-          percent: '13.7',
-          isGrown: true
-        },
-        new: {
-          value: '509',
-          percent: '0.1',
-          isGrown: false
-        },
-        fillKey: 'MAJOR',
-        short: 'cn'
+      new: {
+        value: "444",
+        percent: "41.2",
+        isGrown: false,
       },
-      DEU: {
-        active: {
-          value: '8,408',
-          percent: '5.4',
-          isGrown: false
-        },
-        new: {
-          value: '1001',
-          percent: '5.1',
-          isGrown: true
-        },
-        fillKey: 'MAJOR',
-        short: 'de'
+      fillKey: "MAJOR",
+      short: "br",
+    },
+    CHN: {
+      active: {
+        value: "10,101",
+        percent: "13.7",
+        isGrown: true,
       },
-      GBR: {
-        active: {
-          value: '4,889',
-          percent: '9.1',
-          isGrown: false
-        },
-        new: {
-          value: '2,001',
-          percent: '3.2',
-          isGrown: true
-        },
-        fillKey: 'MAJOR',
-        short: 'gb'
+      new: {
+        value: "509",
+        percent: "0.1",
+        isGrown: false,
       },
-      IND: {
-        active: {
-          value: '1,408',
-          percent: '19.2',
-          isGrown: true
-        },
-        new: {
-          value: '392',
-          percent: '11.1',
-          isGrown: true
-        },
-        fillKey: 'MAJOR',
-        short: 'in'
+      fillKey: "MAJOR",
+      short: "cn",
+    },
+    DEU: {
+      active: {
+        value: "8,408",
+        percent: "5.4",
+        isGrown: false,
       },
-      USA: {
-        active: {
-          value: '392',
-          percent: '0.9',
-          isGrown: true
-        },
-        new: {
-          value: '1,408',
-          percent: '2.2',
-          isGrown: true
-        },
-        fillKey: 'MAJOR',
-        short: 'us',
-        customName: 'United States'
-      }
-    };
-    const dataMap = new Datamap({
-      element: document.querySelector('#hs-users-datamap'),
-      projection: 'mercator',
-      responsive: true,
-      fills: {
-        defaultFill: '#d1d5db',
-        MAJOR: '#9ca3af'
+      new: {
+        value: "1001",
+        percent: "5.1",
+        isGrown: true,
       },
-      data: dataSet,
-      geographyConfig: {
-        borderColor: 'rgba(0, 0, 0, .09)',
-        highlightFillColor: '#3b82f6',
-        highlightBorderColor: '#3b82f6',
-        popupTemplate: function (geo, data) {
-          const growUp = `<svg class="size-4 text-teal-500 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+      fillKey: "MAJOR",
+      short: "de",
+    },
+    GBR: {
+      active: {
+        value: "4,889",
+        percent: "9.1",
+        isGrown: false,
+      },
+      new: {
+        value: "2,001",
+        percent: "3.2",
+        isGrown: true,
+      },
+      fillKey: "MAJOR",
+      short: "gb",
+    },
+    IND: {
+      active: {
+        value: "1,408",
+        percent: "19.2",
+        isGrown: true,
+      },
+      new: {
+        value: "392",
+        percent: "11.1",
+        isGrown: true,
+      },
+      fillKey: "MAJOR",
+      short: "in",
+    },
+    USA: {
+      active: {
+        value: "392",
+        percent: "0.9",
+        isGrown: true,
+      },
+      new: {
+        value: "1,408",
+        percent: "2.2",
+        isGrown: true,
+      },
+      fillKey: "MAJOR",
+      short: "us",
+      customName: "United States",
+    },
+  };
+  const dataMap = new Datamap({
+    element: document.querySelector("#hs-users-datamap"),
+    projection: "mercator",
+    responsive: true,
+    fills: {
+      defaultFill: "#d1d5db",
+      MAJOR: "#9ca3af",
+    },
+    data: dataSet,
+    geographyConfig: {
+      borderColor: "rgba(0, 0, 0, .09)",
+      highlightFillColor: "#3b82f6",
+      highlightBorderColor: "#3b82f6",
+      popupTemplate: function (geo, data) {
+        const growUp = `<svg class="size-4 text-teal-500 dark:text-teal-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
           </svg>`;
-          const growDown = `<svg class="size-4 text-red-500 dark:text-red-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+        const growDown = `<svg class="size-4 text-red-500 dark:text-red-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
           </svg>`;
 
-          return `<div class="bg-white rounded-xl shadow-[0_10px_40px_10px_rgba(0,0,0,0.08)] w-[150px] p-3">
+        return `<div class="bg-white rounded-xl shadow-[0_10px_40px_10px_rgba(0,0,0,0.08)] w-[150px] p-3">
             <div class="flex mb-1">
               <div class="me-2">
-                <div class="size-4 rounded-full bg-no-repeat bg-center bg-cover" style="background-image: url('../node_modules/svg-country-flags/svg/${data.short}.svg')"></div>
+                <div class="size-4 rounded-full bg-no-repeat bg-center bg-cover" style="background-image: url('../node_modules/svg-country-flags/svg/${
+                  data.short
+                }.svg')"></div>
               </div>
-              <span class="text-sm font-medium">${data.customName || geo.properties.name}</span>
+              <span class="text-sm font-medium">${
+                data.customName || geo.properties.name
+              }</span>
             </div>
             <div class="flex items-center">
               <span class="text-sm text-gray-500 dark:text-neutral-500">Active:</span>
                <span class="text-sm font-medium ${data.active.value}</span>
-               <span class="text-sm ${data.active.isGrown ? 'text-teal-500 dark:text-teal-400' : 'text-red-500 dark:text-red-400'}'>${data.active.percent}</span>
+               <span class="text-sm ${
+                 data.active.isGrown
+                   ? "text-teal-500 dark:text-teal-400"
+                   : "text-red-500 dark:text-red-400"
+               }'>${data.active.percent}</span>
                ${data.active.isGrown ? growUp : growDown}
             </div>
             <div class="flex items-center">
               <span class="text-sm text-gray-500 dark:text-neutral-500">New:</span>
                <span class="text-sm font-medium ${data.new.value}</span>
-               <span class="text-sm ${data.active.isGrown ? 'text-teal-500 dark:text-teal-400' : 'text-red-500 dark:text-red-400'}'>${data.new.percent}</span>
+               <span class="text-sm ${
+                 data.active.isGrown
+                   ? "text-teal-500 dark:text-teal-400"
+                   : "text-red-500 dark:text-red-400"
+               }'>${data.new.percent}</span>
                ${data.new.isGrown ? growUp : growDown}
             </div>
           </div>`;
-        }
-      }
-    });
-    dataMap.addPlugin('update', function (_, mode) {
-      this.options.fills = (mode === 'dark') ? {
-        defaultFill: '#374151',
-        MAJOR: '#6b7280'
-      } : {
-        defaultFill: '#d1d5db',
-        MAJOR: '#9ca3af'
-      };
+      },
+    },
+  });
+  dataMap.addPlugin("update", function (_, mode) {
+    this.options.fills =
+      mode === "dark"
+        ? {
+            defaultFill: "#374151",
+            MAJOR: "#6b7280",
+          }
+        : {
+            defaultFill: "#d1d5db",
+            MAJOR: "#9ca3af",
+          };
 
-      this.updateChoropleth(dataSet, {reset: true});
-    });
+    this.updateChoropleth(dataSet, { reset: true });
+  });
 
-    dataMap.update(localStorage.getItem('hs_theme'));
+  dataMap.update(localStorage.getItem("hs_theme"));
 
-    window.addEventListener('on-hs-appearance-change', (evt) => {
-      dataMap.update(evt.detail);
-    });
+  window.addEventListener("on-hs-appearance-change", (evt) => {
+    dataMap.update(evt.detail);
+  });
 
-    window.addEventListener('resize', function () {
-      dataMap.resize();
-    });
-  })();
+  window.addEventListener("resize", function () {
+    dataMap.resize();
+  });
+})();
 
-  
 const options = {
   chart: {
     height: "100%",
@@ -713,7 +715,7 @@ const options = {
     padding: {
       left: 2,
       right: 2,
-      top: -26
+      top: -26,
     },
   },
   series: [
@@ -729,19 +731,27 @@ const options = {
     },
   ],
   legend: {
-    show: false
+    show: false,
   },
   stroke: {
-    curve: 'smooth'
+    curve: "smooth",
   },
   xaxis: {
-    categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
+    categories: [
+      "01 Feb",
+      "02 Feb",
+      "03 Feb",
+      "04 Feb",
+      "05 Feb",
+      "06 Feb",
+      "07 Feb",
+    ],
     labels: {
       show: true,
       style: {
         fontFamily: "Inter, sans-serif",
-        cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
-      }
+        cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
+      },
     },
     axisBorder: {
       show: false,
@@ -753,43 +763,44 @@ const options = {
   yaxis: {
     show: false,
   },
-}
+};
 
-if (document.getElementById("line-chart") && typeof ApexCharts !== 'undefined') {
+if (
+  document.getElementById("line-chart") &&
+  typeof ApexCharts !== "undefined"
+) {
   const chart = new ApexCharts(document.getElementById("line-chart"), options);
   chart.render();
 }
 
-
-window.addEventListener('scroll', function() {
-  var fixedDiv = document.getElementById('fixedDiv');
-  var contentElements = document.getElementsByClassName('content');
+window.addEventListener("scroll", function () {
+  var fixedDiv = document.getElementById("fixedDiv");
+  var contentElements = document.getElementsByClassName("content");
   var divHeight = fixedDiv.offsetHeight;
   var isOverlapping = false;
 
   for (var i = 0; i < contentElements.length; i++) {
-      var rect = contentElements[i].getBoundingClientRect();
-      if (rect.top < divHeight && rect.bottom > 0) {
-          isOverlapping = true;
-          break;
-      }
+    var rect = contentElements[i].getBoundingClientRect();
+    if (rect.top < divHeight && rect.bottom > 0) {
+      isOverlapping = true;
+      break;
+    }
   }
 
   if (isOverlapping) {
-      fixedDiv.style.backgroundColor = 'yellow';
+    fixedDiv.style.backgroundColor = "yellow";
   } else {
-      fixedDiv.style.backgroundColor = 'white';
+    fixedDiv.style.backgroundColor = "white";
   }
 });
-
 
 function view_video() {
   var view_content = document.getElementById("view_content");
   var value_video = document.getElementById("value_video").value;
-  if (value_video === "1" ){
+  if (value_video === "1") {
     view_content.classList.remove("hidden");
     view_content.classList.add("block");
-  }else{
+  } else {
     view_content.classList.remove("hidden");
     view_content.classList.add("block");
   }
