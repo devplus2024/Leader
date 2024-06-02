@@ -11,6 +11,9 @@
 		<meta property="og:image"
 			content="https://developplus2024.github.io/Leader/src/Image/banner.jpg">
 		<meta property="og:url" content="https://developplus2024.github.io/Leader/">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<meta property="og:type" content="website">
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="Leader">
@@ -87,7 +90,7 @@
 			<div
 				class="flex bg-black sm:items-start  xl:justify-between px-[2rem] xl:flex-row sm:flex-col md:flex-col   absolute w-full  gap-[6rem] py-3  xl:items-center div_nav_flex "
 				id="fixedDiv"
-				style="z-index: 4;box-shadow: 0 0 0 1px #403f3f99;">
+				style="z-index: 4;box-shadow: 0 0 0 1px #000000;">
 				<div
 					class="xl:inline-block md:hidden sm:hidden lg:hidden max-[468px]:hidden">
 
@@ -146,9 +149,9 @@
 							</div> -->
 							<input type="radio" id="pricing" name="tab"
 								onclick="showContent('pricingContent')">
-							<label for="pricing">
+							<label for="pricing" class="hidden">
 								<div
-									class="a__hover relative  hover:text-white cursor-pointer select-none">
+									class="a__hover  relative  hover:text-white cursor-pointer select-none">
 
 									<span class="  ">Pricing</span>
 
@@ -188,9 +191,9 @@
 
 									<input type="radio" id="product" name="tab"
 										onclick="showContent('productContent')">
-									<label for="product">
+									<label for="product" class="hidden">
 										<div
-											class="a__hover  relative hover:text-white cursor-pointer select-none">
+											class="a__hover hidden relative hover:text-white cursor-pointer select-none">
 											<span class="  ">Product</span>
 
 										</div>
@@ -208,7 +211,7 @@
 										onclick="showContent('exerciseContent')">
 									<label for="exercise">
 										<div
-											class="a__hover relative hover:text-white cursor-pointer select-none">
+											class="a__hover  relative hover:text-white cursor-pointer select-none">
 											<span class="  cursor-pointer">Exercise</span>
 
 										</div>
@@ -217,14 +220,14 @@
 										onclick="showContent('chatboxContent')">
 									<label for="chatbox">
 										<div
-											class="a__hover relative  hover:text-white cursor-pointer select-none">
+											class="a__hover hidden relative  hover:text-white cursor-pointer select-none">
 											<span class="  cursor-pointer">ChatBox</span>
 
 										</div>
 									</label>
 
 									<div
-										class="subnav__list-item subnav__list-item__dropdown relative hover:text-white a__hover">
+										class="subnav__list-item hidden subnav__list-item__dropdown relative hover:text-white a__hover">
 										<span
 											class="ds-paragraph__level-4 light:text-black subnav__list-item__title   rounded-md "
 											onclick="show_Service_menu()" id="span_services">
@@ -275,6 +278,11 @@
 								</div>
 							</div>
 
+						</div>
+						<div
+							class="w-[20rem] text-[#6c6c6c] text-sm bg-[#1a1a1a] pl-[1rem] h-[2.3rem] flex items-center rounded-lg "
+							style="border:1px solid rgb(0, 0, 0);">
+							Search Your KeyWord
 						</div>
 						<div
 							class="xl:flex lg:hidden light:text-black dark:text-white   gap-2 xl:items-center  sm:hidden md:hidden max-[468px]:hidden  ">
@@ -535,23 +543,22 @@
 									<div class="relative">
 
 										<h1
-											class=" font-bold xl:text-[4.5rem] sm:text-[3.5rem] max-[468px]:text-[1.9rem] animate_text_h1">Learn
-											to Code with Ease</h1>
+											class=" font-bold text-center xl:text-[2.6rem] sm:text-[3.5rem] max-[468px]:text-[1.9rem]" style="font-family: REM, sans-serif;line-height: 50px;letter-spacing: -.05em;">Learn
+											Programming, Unlock Your Potential</h1>
 
 									</div>
 									<p
-										class="text-center xl:text-2xl sm:text-xl max-[468px]:text-[10px] xl:w-[60rem] max-[468px]:w-[20rem]"
-										style="color:#ffffff">Our platform provides interactive lessons,
-										hands-on projects, and personalized feedback to help you become a
-										skilled
-										programmer.</p>
+										class="text-center xl:text-xl sm:text-xl max-[468px]:text-[10px] xl:w-[50rem] max-[468px]:w-[20rem]"
+										style="color:#ffffff">Dive into the world of programming with our
+										comprehensive courses and resources. Unleash your creativity and
+										transform your ideas into reality.</p>
 								</div>
 								<div class="flex gap-[4rem]">
 									<a>
 										<button
 											class=" bg-[#000000] px-5 text-white py-2 button_Signup rounded-md"
 											style="box-shadow:0 0 0 0.5px grey"
-											onclick="showContent('signupContent')">Sign Up</button>
+											onclick="showContent('signupContent')">Explore Courses</button>
 									</a>
 
 									<button
